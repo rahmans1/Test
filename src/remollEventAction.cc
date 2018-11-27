@@ -90,6 +90,8 @@ void remollEventAction::EndOfEventAction(const G4Event* aEvent)
 	    analysisManager->FillNtupleDColumn(1,8,event->fPartPos[thishit.trid-1].x());
 	    analysisManager->FillNtupleDColumn(1,9,event->fPartPos[thishit.trid-1].y());
 	    analysisManager->FillNtupleDColumn(1,10,event->fPartPos[thishit.trid-1].z());
+	    analysisManager->FillNtupleDColumn(1,11, thishit.e);
+	    analysisManager->FillNtupleDColumn(1,12, event->fQ2);
             analysisManager->AddNtupleRow(1);
           
 	   }
