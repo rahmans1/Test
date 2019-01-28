@@ -1,19 +1,19 @@
-#ifndef __REMOLLGENBEAM_HH 
-#define __REMOLLGENBEAM_HH 
+#ifndef __REMOLLGENTEST_HH 
+#define __REMOLLGENTEST_HH 
 /*!
- * Boring beam event generator
+ * Optical event generator
  *
- * Seamus Riordan
- * July 9, 2013
+ * Sakib Rahman
+ * January 1, 2019
  *
 */
 
 #include "remollVEventGen.hh"
 
-class remollGenBeam : public remollVEventGen {
+class remollGenTest : public remollVEventGen {
     public:
-	remollGenBeam();
-	virtual ~remollGenBeam();
+	remollGenTest();
+	virtual ~remollGenTest();
 
     private:
 	void SamplePhysics(remollVertex *, remollEvent *);
@@ -21,4 +21,4 @@ class remollGenBeam : public remollVEventGen {
 	double fZpos;
 };
 
-#endif//__REMOLLGENBEAM_HH 
+#endif//__REMOLLGENTEST_HH 
