@@ -102,6 +102,8 @@ void remollRunAction::BeginOfRunAction(const G4Run* run)
     analysisManager->CreateNtupleDColumn("vz");
     analysisManager->CreateNtupleDColumn("hitenergy");
     analysisManager->CreateNtupleDColumn("Q2");
+    analysisManager->CreateNtupleDColumn("particle");
+    analysisManager->CreateNtupleDColumn("track");
     analysisManager->FinishNtuple();
     analysisManager->OpenFile();
     /*----------------------------------------------------*/

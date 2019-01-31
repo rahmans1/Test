@@ -72,8 +72,8 @@ void remollEventAction::EndOfEventAction(const G4Event* aEvent)
 
    /*-----------------Implementing Analysis Manager-Sakib----------------*/
     	  remollGenericDetectorHit_t thishit= (((remollGenericDetectorHit *) thiscast->GetHit(hidx))->GetGenericDetectorHitIO());
-          int detcut = thishit.det==27||thishit.det==26||thishit.det==25||thishit.det==24||thishit.det==28||thishit.det==29;
-          if( detcut && thishit.trid<=maxtr && thishit.pid==11){ //hits plane detector, is electron, is moller, elastic or inelastic
+          //int detcut = thishit.det==27||thishit.det==26||thishit.det==25||thishit.det==24||thishit.det==28||thishit.det==29;
+          if(true){// detcut && thishit.trid<=maxtr && thishit.pid==11){ //hits plane detector, is electron, is moller, elastic or inelastic
          
             analysisManager->FillNtupleDColumn(1,0,thishit.x);
             analysisManager->FillNtupleDColumn(1,1,thishit.y);
@@ -92,6 +92,8 @@ void remollEventAction::EndOfEventAction(const G4Event* aEvent)
 	    analysisManager->FillNtupleDColumn(1,10,event->fPartPos[thishit.trid-1].z());
 	    analysisManager->FillNtupleDColumn(1,11, thishit.e);
 	    analysisManager->FillNtupleDColumn(1,12, event->fQ2);
+            analysisManager->FillNtupleDColumn(1,13, thishit.pid);
+	    analysisManager->FillNtupleDColumn(1,14, thishit.trid);
             analysisManager->AddNtupleRow(1);
           
 	   }
