@@ -290,6 +290,7 @@ void remollGlobalField::SetFieldScaleByString(G4String& name_scale)
   iss >> scalestr;
 
   G4double scaleval = atof(scalestr);
+  G4cout<< "Field is " <<scaleval <<G4endl;
   SetFieldScale(name, scaleval);
 }
 

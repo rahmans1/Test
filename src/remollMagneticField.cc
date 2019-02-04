@@ -362,6 +362,7 @@ void remollMagneticField::ReadFieldMap(){
 		fBFieldData[kR][ridx][pidx][zidx]   = br*tesla;
 		fBFieldData[kPhi][ridx][pidx][zidx] = bp*tesla;
 		fBFieldData[kZ][ridx][pidx][zidx]   = bz*tesla;
+           
 
 	    }
 	}
@@ -483,6 +484,11 @@ void remollMagneticField::GetFieldValue(const G4double Point[4], G4double *Bfiel
     Bfield[0] = Bcart.x()*fFieldScale;
     Bfield[1] = Bcart.y()*fFieldScale;
     Bfield[2] = Bcart.z()*fFieldScale;
+     
+    
+    G4cout<< fFieldScale<< " " <<Bfield[0] << " " << Bfield[1] <<" " << Bfield[2] << G4endl;
+    
+    
 } 
 
 
